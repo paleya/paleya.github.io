@@ -1,1 +1,0 @@
-# paleya.github.io
