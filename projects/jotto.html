@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Java-based solver for the word game Jotto using information theory.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Jotto Solver | Albert Li</title>
+</head>
+
+<body>
+
+    <header class="masthead">
+        <nav class="navigation">
+            <a class="jb-name" href="../index.html">Albert Li</a>
+
+            <div class="nav-links">
+                <a class="jb-ref" href="../index.html">home</a>
+                <a class="jb-ref active" href="../projects.html" aria-current="page">projects</a>
+                <a class="jb-ref" href="../contact.html">connect</a>
+                <a class="jb-ref" href="../resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="content">
+            <p class="text"><a href="../projects.html">← Projects</a></p>
+
+            <h1 class="title">Jotto Solver</h1>
+            <p class="text">A Java-based solver for the word game Jotto using information theory.</p>
+            <p class="text">
+                <u><a href="https://github.com/paleya/jotto-solver" target="_blank" rel="noopener noreferrer">Source Code ↗</a></u>
+            </p>
+        </section>
+
+
+        <section class="content project-section">
+            <h2 class="header">About</h2>
+            <p class="text">
+                <!-- Brief description of project -->
+                I was introduced to Jotto in my CS course and took an immediate liking to it.
+                It was like Wordle, but instead of knowing the positions of letters,
+                you only know how many letters are shared between your guess and the secret word.
+                I'd learned about information theory before, and this seemed like the perfect
+                place to apply it. On average, the solver takes around 7.39 guesses to arrive
+                at the correct word, which beats out most human players.
+            </p>
+        </section>
+
+        <section class="content project-section">
+            <h2 class="header">Approach</h2>
+            <p class="text">
+                <!-- More in depth about project development and theory -->
+                In Jotto, each guess is given a number from 0-5 (assuming 5-letter words) to indicate
+                how many letters are shared between the guess and secret word. If your guess and the secret
+                word both have multiple of the same letter, then it gets counted multiple times. The approach
+                I took for applying information theory to this was to try and maximize the entropy gained from
+                each guess by splitting the solution space between each possible reponse to the guess (0-5),
+                which should lead to an exponential decrease of the solution space. For this project, I used
+                a dictionary of 5757 5-letter words, which for context is larger than the number of potential solutions
+                in Wordle but smaller than the number of guesses it allows. The solver repeatedly iterates through
+                the full dictionary to generate guesses each turn, choosing the guess with the highest entropy.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Albert Li</p>
+    </footer>
+
+</body>
+</html>
