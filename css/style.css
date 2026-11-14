@@ -10,15 +10,15 @@
 
 :root {
     /* Colors */
-    --background: #f5fcf3;
-    --accent: #8B9E7A;
-    --text-primary: #335330;
-    --background-secondary: #DCD6F7;
-    --accent-secondary: #AB72AE;
-    --text-secondary: #3D2F64;
+    --background: #e9e4ff;
+    --accent: #b57db8;
+    --text-primary: #1e0269;
+    --background-secondary: #ecf6e9;
+    --accent-secondary: #508e62;
+    --text-secondary: #385a35;
 
     /* Typography */
-    --font-main: "JetBrains Mono", monospace;
+    --font-main: "Lora", Georgia, serif;
     --font-size-small: 0.8rem;
     --font-size-normal: 1rem;
     --font-size-large: 1.25rem;
@@ -28,10 +28,12 @@
     --font-weight-medium: 500;
     --font-weight-bold: 700;
 
-    --line-height: 1.7;
+    --line-height-large: 1.7;
+    --line-height-medium: 1.5;
+    --line-height-small: 1.2;
 
     /* Layout */
-    --content-width: 680px;
+    --content-width: 850px;
 
     /* Spacing */
     --space-xs: 0.5rem;
@@ -53,7 +55,7 @@ body {
     font-family: var(--font-main);
     font-size: var(--font-size-normal);
     font-weight: var(--font-weight-normal);
-    line-height: var(--line-height);
+    line-height: var(--line-height-large);
     
     margin: 0;
     min-height: 100vh;
@@ -80,22 +82,29 @@ img {
 /* Masthead */
 
 .jb-name {
-    font-size: var(--font-size-title);
-    font-weight: var(--font-weight-bold);
-    line-height: 1.2;
+    font-size: 2.8rem;
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-small);
+    letter-spacing: -0.03em;
 }
 
 /* Content */
 
 .intro {
     font-size: var(--font-size-large);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.7;
+    margin-top: var(--space-md);
     margin-bottom: var(--space-lg);
+    max-width: 750px;
 }
 
 .header {
-    font-size: var(--font-size-large);
-    font-weight: var(--font-weight-bold);
+    font-size: 2rem;
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-small);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-sm);
 }
 
 .text {
@@ -104,7 +113,7 @@ img {
 }
 
 .content {
-    width: min(95%, 1100px);
+    width: min(90%, 900px);
     margin: var(--space-md) auto;
 }
 
@@ -145,6 +154,8 @@ html {
 .masthead {
     width: min(95%, 1100px);
     margin: var(--space-md) auto;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 15px;
 }
 
 /* Navigation */
@@ -161,11 +172,15 @@ html {
     align-items: center;
     flex-wrap: wrap;
     gap: var(--space-md);
-    
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.04em;
 }
 
 .nav-links a.active {
     color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .nav-links a:hover {
@@ -179,6 +194,7 @@ html {
     flex-direction: column;
     max-width: 500px;
     margin-top: var(--space-md);
+    text-decoration: underline
 }
 
 .contact-link {
@@ -214,15 +230,15 @@ html {
 .project-links {
     display: flex;
     flex-direction: column;
-    max-width: 700px;
+    max-width: 750px;
     margin-top: var(--space-md);
 }
 
 .project-link {
     display: flex;
     flex-direction: column;
-    gap: var(--space-xs);
-    padding: var(--space-sm) 0;
+    gap: 0.65rem;
+    padding: 1.5rem 0;
     border-bottom: 1px solid var(--accent);
     transition: var(--transition);
 }
@@ -232,27 +248,82 @@ html {
 }
 
 .project-link:hover {
-    padding-left: var(--space-xs);
+    padding-left: 0.75rem;
 }
 
 .project-name {
-    font-weight: var(--font-weight-bold);
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 4px;
+}
+
+.project-link:hover .project-name {
+    color: var(--accent-secondary);
 }
 
 .project-description {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-normal);
+    color: var(--text-secondary);
+    line-height: var(--line-height-medium);
+    max-width: 680px;
 }
 
 .project-section {
-    margin-top: var(--space-lg);
+    margin-top: 3rem;
 }
 
-.project-section a {
+
+/* Homepage */
+
+
+/* Homepage */
+
+.home-intro {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.home-title {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-small);
+    letter-spacing: -0.03em;
+    margin-bottom: var(--space-md);
+}
+
+.home-intro .intro {
+    font-size: var(--font-size-large);
+    max-width: var(--content-width);
+    margin: 0 0 var(--space-md);
+}
+
+.home-intro .text {
+    max-width: var(--content-width);
+    line-height: var(--line-height-large);
+}
+
+.home-section {
+    max-width: var(--content-width);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--accent);
+}
+
+.home-section .header {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--space-md);
+}
+
+.home-section .text {
+    max-width: var(--content-width);
+    line-height: var(--line-height-large);
+}
+
+.home-section a {
     text-decoration: underline;
     text-decoration-color: var(--accent);
     text-underline-offset: 3px;
-}
-
-.project-section a:hover {
-    color: var(--accent-secondary);
 }

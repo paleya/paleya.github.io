@@ -17,20 +17,7 @@
 
 <body>
 
-    <header class="masthead">
-
-        <nav class="navigation">
-            <a class="jb-name" href="index.html">Albert Li</a>
-
-            <div class="nav-links">
-                <a class="jb-ref" href="index.html">home</a>
-                <a class="jb-ref" href="projects.html">projects</a>
-                <a class="jb-ref active" href="contact.html" aria-current="page">connect</a>
-                <a class="jb-ref" href="resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
-            </div>
-        </nav>
-
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
 
@@ -39,9 +26,12 @@
             <p class="text">Feel free to reach out for anything!</p>
 
             <div class="contact-links">
-                <a href="mailto:li_albert@outlook.com" class="contact-link">
-                    <img src="images/email.png" alt="" class="contact-icon">
-                    <span class="contact-name">Email</span>
+                <a class="contact-link"
+                    href="#"
+                    onclick="this.href='mailto:' + 'li_albert' + '@' + 'outlook.com'">
+
+                        <img src="images/email.png" alt="" class="contact-icon">
+                        <span class="contact-name">Email</span>
                 </a>
 
                 <a href="https://github.com/paleya" class="contact-link" target="_blank" rel="noopener noreferrer">
@@ -62,5 +52,7 @@
         <p>© 2026 Albert Li</p>
     </footer>
     
+    <script src="js/header.js"></script>
+
 </body>
 </html>

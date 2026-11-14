@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -18,42 +18,60 @@
 
 <body>
 
-    <header class="masthead">
-
-        <nav class="navigation">
-            <a class="jb-name" href="index.html">Albert Li</a>
-
-            <div class="nav-links">
-                <a class="jb-ref active" href="index.html" aria-current="page">home</a>
-                <a class="jb-ref" href="projects.html">projects</a>
-                <a class="jb-ref" href="contact.html">connect</a>
-                <a class="jb-ref" href="resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
-            </div>
-        </nav>
-
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
 
-        <section class="content">
-            <p class="intro">Hello, I'm Albert! I enjoy exploring new ideas and meeting new people.</p>
+        <!-- Introduction -->
+        <section class="content home-intro">
+
+            <h1 class="home-title">Hello! I'm Albert Li.</h1>
+
+            <p class="intro">
+                I'm currently a student at Harvey Mudd College and am planning on majoring in Engineering.
+                Outside of classes, I'm part of the Mudd Amateur Rocketry Team, MuddSub, and am working as
+                a research volunteer for the college's Very Large Scale Integration Design Lab.
+            </p>
+
         </section>
 
-        <section class="content">
-            <h1 class="header">A few things I like:</h1>
+        <section class="content home-section">
 
-            <div>
-                <p class="text">- Reading</p>
-                <p class="text">- Making things</p>
-                <p class="text">- Learning new things!</p>
-            </div>
+            <h2 class="header">Interests</h2>
+
+            <p class="text">
+                A few subjects and activities that I enjoy exploring include:
+            </p>
+
+            <ul class="likes-list">
+                <li>Silicon engineering</li>
+                <li>Control systems</li>
+                <li>Reading science fiction and fantasy</li>
+                <li>Playing piano</li>
+            </ul>
+
         </section>
+
+        
+        <section class="content home-section">
+
+            <h2 class="header">Projects</h2>
+
+            <p class="text">
+                You can see my current and past projects
+                <a href="projects.html">here</a>!
+            </p>
+
+        </section>
+
 
     </main>
 
     <footer class="footer">
         <p>© 2026 Albert Li</p>
     </footer>
+
+    <script src="js/header.js"></script>
 
 </body>
 </html>
