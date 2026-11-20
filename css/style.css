@@ -194,7 +194,6 @@ html {
     flex-direction: column;
     max-width: 500px;
     margin-top: var(--space-md);
-    text-decoration: underline
 }
 
 .contact-link {
@@ -212,6 +211,7 @@ html {
 
 .contact-link:hover {
     padding-left: var(--space-xs);
+    
 }
 
 .contact-name {
@@ -275,6 +275,13 @@ html {
     margin-top: 3rem;
 }
 
+.project-image {
+    width: 800px;
+    object-fit: contain;
+    flex-shrink: 0;
+    padding: 1.5rem 0;
+}
+
 
 /* Homepage */
 
@@ -326,4 +333,9 @@ html {
     text-decoration: underline;
     text-decoration-color: var(--accent);
     text-underline-offset: 3px;
+}
+
+
+.home-section a:hover {
+    text-decoration-color: var(--secondary-accent);
 }
